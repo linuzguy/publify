@@ -117,6 +117,9 @@ If application error has occurred after migration, you need to restart Heroku se
 ```bash
 heroku restart
 ```
+or
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Resources
 
