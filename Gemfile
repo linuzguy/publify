@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ENV['RAILS_ENV']='test'
 ENV['HEROKU']='true'
 if ENV['HEROKU']
-  ruby '2.1.5'
+  ruby '2.2.3'
 
   gem 'pg'
   gem 'thin' # Change this to another web server if you want (ie. unicorn, passenger, puma...)
