@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ENV['HEROKU']='production'
+ENV['RAILS_ENV']='production'
 ENV['HEROKU']='true'
 if ENV['HEROKU']
   ruby '2.2.3'
