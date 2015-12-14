@@ -3,6 +3,7 @@ ENV['RAILS_ENV']='production'
 ENV['HEROKU']='true'
 if ENV['HEROKU']
   ruby '2.2.3'
+  gem 'rubocop', '~> 0.35.1', require: true
 
   gem 'pg'
   gem 'thin' # Change this to another web server if you want (ie. unicorn, passenger, puma...)
