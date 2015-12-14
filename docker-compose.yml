@@ -1,12 +1,20 @@
 web:
   build: .
-  command: 'bash -c ''bundle exec rails server --binding=0.0.0.0 -p 8080'''
+  command: 'bash -c ''bundle exec rails server --binding=0.0.0.0 -p $PORT'''
   working_dir: /app/user
   environment:
     PORT: 8080
     DATABASE_URL: 'postgres://postgres:@herokuPostgresql:5432/postgres'
   ports:
     - '8080:8080'
+  links:
+    - herokuPostgresql
+dbsetp:
+  build: .
+  command: 'bash -c ''bundle exec rake db:migrate db:seed'''
+  working_dir: /app/user
+  environment:
+    DATABASE_URL: 'postgres://postgres:@herokuPostgresql:5432/postgres'
   links:
     - herokuPostgresql
 shell:
